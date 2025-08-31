@@ -5,14 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - [Ton Nom]</title>
   <style>
+    /*import de police*/
+    @font-face {
+  font-family: 'revalia';
+  src: url('Revalia-Regular.ttf') format('truetype');
+}
     /* --- Styles généraux --- */
     body { 
-      font-family: 'Segoe UI', sans-serif; 
+      font-family: revalia; 
       margin: 0; padding: 0; 
       background: #f4f6f9; 
       color: #333; 
       line-height: 1.6;
     }
+    /*positionnement du logo et son contenaire*/
+    #logo img{
+      height: auto;
+      width: 140;
+      position: absolute;
+      top: 0px;
+      right: 1300px;
+      padding-bottom: 1002PX;
+      
+    
+    }
+  #ilogo{
+    position: absolute;  /* positionnée par rapport au parent */
+  top: 0;
+  left: 0;
+  width: 100%;        /* remplit la largeur */
+  height: 100%;       /* remplit la hauteur */
+  object-fit: cover;  /* image couvre tout le div sans déformation */
+  z-index: 1;  
+
+  }
 
     h1, h2, h3 { margin-bottom: 10px; }
     a { color: #3498db; text-decoration: none; }
@@ -27,12 +53,15 @@
       position: sticky; 
       top: 0; 
       z-index: 1000; 
+      height: 40px;
     }
 
     header h1 { font-size: 2.5em; margin: 0; }
     header p { font-size: 1.2em; margin: 10px 0; }
 
-    nav { margin-top: 15px; }
+    nav { 
+      padding-left: 700PX;
+      margin-top: 15px; }
     nav a { 
       color: white; 
       margin: 0 15px; 
@@ -43,19 +72,20 @@
 
     /* --- Sections --- */
     section { 
-      padding: 60px 20px; 
+      padding: 0PX; 
       max-width: 1000px; 
-      margin: auto; 
+      margin: 0PX; 
     }
 
-    section h2 { 
-      color: #2c3e50; 
+    section h1 { 
+      color: #fcfdfe; 
       text-align: center; 
-      margin-bottom: 40px; 
-      font-size: 2em; 
+      margin-top: 0px; 
+      font-size: 100PX; 
+      
       position: relative;
     }
-    section h2::after {
+    section h1::after {
       content: "";
       width: 60px; 
       height: 4px; 
@@ -64,6 +94,22 @@
       margin: 10px auto 0;
       border-radius: 2px;
     }
+    #about{
+      margin:0px;
+      padding 0%;
+      height: 559px;
+      padding-bottom: 90px;
+    }
+   
+#photo{
+  position: absolute;
+  height: 599PX;
+  width: 1462PX;
+  margin-right: 0px;
+  display: flex;
+  
+}
+
 
     /* --- Compétences et projets en grille --- */
     .skills, .projects { 
@@ -88,17 +134,59 @@
 
     /* --- Contact --- */
     #contact p { 
+      background-color: #000000;
       text-align: center; 
       font-size: 1.1em; 
+      width: 350px;
+      margin: 20px;
+      padding: 10px;
+      border:  1px solid lightblue ;
     }
-
+    #contactbox{
+      font-size: 10px;
+      background-color: #000000;
+      height: 670px;
+      width: 1462PX;
+      display: block;
+      position: ;
+    }
+    #finalcontactbox{
+      position: absolute;
+      border: 1px white solid;
+      width: 800px;
+      height: 400px;
+      right: 30px;
+      top: 1500px;
+     margin: 0%;
+     padding: 0%;
+     left: 200PX;
+    }
+    #message{
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      height: 350px;
+      position: absolute;
+      padding-top: 0px;
+      border:  1px solid lightblue ;
+      left: 550px;
+      bottom: 20px;
+      background-color: rgb(24, 24, 64);
+    }
+    #message input {
+      color: #f4f6f9;
+      background-color: #1c0549;
+      height: 20px;
+      width: 350px;
+    }
     /* --- Footer --- */
     footer { 
-      background: #2c3e50; 
+      background: #000000; 
       color: white; 
+      border-top: 2px solid lightblue;
       text-align: center; 
       padding: 20px; 
-      margin-top: 40px; 
+      margin-top: 0; 
       font-size: 0.9em; 
     }
   </style>
@@ -106,18 +194,20 @@
 <body>
 
 <header>
-  <h1>[Ton Nom]</h1>
-  <p>Développeur d’Applications | Étudiant en BTS</p>
+  <div id="logo"><img src="C:\Users\TOB\Desktop\Nouveau dossier (2)\Sans titre - 1 copie.svg" alt="" id=></div>
+
   <nav>
     <a href="#about">Présentation</a>
     <a href="#skills">Compétences</a>
     <a href="#projects">Projets</a>
     <a href="#contact">Contact</a>
+    <button type=""></button>
   </nav>
 </header>
-
 <section id="about">
-  <h2>À propos de moi</h2>
+  <img src="C:\Users\TOB\Desktop\depot\porfolio\new.jpg" alt="DEV SPACE" id="photo">
+  <h1>TOBA</h1>
+  <h3>DEV</h3>
   <p style="text-align:center; max-width:700px; margin:auto;">
     Je suis étudiant en BTS Développement d'Applications, passionné par la programmation et la cybersécurité. 
     J’aime concevoir des projets concrets, que ce soit des applications web, logicielles ou de gestion. 
@@ -139,12 +229,12 @@
   <h2>Projets</h2>
   <div class="projects">
     <div class="card">
-      <h3>Gestion de Pointage PME</h3>
-      <p>Application sous WinDev 25 pour gérer les employés, absences et pointages.</p>
+      <h3></h3>
+      <p></p>
     </div>
     <div class="card">
-      <h3>Gestion des passages enseignants</h3>
-      <p>Projet PHP/Laravel pour gérer les horaires et présences des professeurs.</p>
+      <h3></h3>
+      <p></p>
     </div>
     <div class="card">
       <h3>Portfolio Web</h3>
@@ -155,13 +245,26 @@
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email : <a href="mailto:tonemail@example.com">tonemail@example.com</a></p>
+  <div id="contactbox">
+    <div id="finalcontactbox">
+    <p>Email : <a href="mailto:tonemail@example.com">tonemail@example.com</a></p>
   <p>GitHub : <a href="https://github.com/TPCEX" target="_blank">github.com/TPCEX</a></p>
   <p>LinkedIn : <a href="#">Ton LinkedIn</a></p>
+  <div id="message">
+    <input type="text" placeholder="TON NOM COMPLET">
+    <input type="email" placeholder="TON EMAIL">
+    <textarea placeholder="TON MESSAGE"></textarea>
+    <button type="submit">Envoyer</button>
+  </div>
+  
+</div> 
+  
+</div>
+
 </section>
 
 <footer>
-  <p>© 2025 [Ton Nom] - Portfolio</p>
+  <p>© 2025... TOBA PAUL CHRIST-EMMANUEL</p>
 </footer>
 
 </body>
