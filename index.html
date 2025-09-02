@@ -1,392 +1,94 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - tob</title>
-  <style>
-    /*import de police*/
-    @font-face {
-  font-family: 'revalia';
-  src: url('Revalia-Regular.ttf') format('truetype');
-}
-    /* --- Styles généraux --- */
-    body { 
-      font-family: revalia; 
-      margin: 0; padding: 0; 
-      background: #f4f6f9; 
-      color: #333; 
-      line-height: 1.6;
-    }
-    /*positionnement du logo et son contenaire*/
-    #logo img{
-      height: 100%;
-      position: absolute;
-      top: 0px;
-      left: 6%;
-      margin-top: 1%;
-      
-      
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src//asset//images//logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Développeur passionné, je conçois des solutions web
+                        modernes et efficaces, alliant performance et
+                        simplicité.." />
+    <meta name="keywords" content="fullstack developer, web developer, react, nodejs, nestjs, typescript, portfolio, vintage design" />
+    <meta name="author" content="TOBA DEV" />
     
-    }
-  #ilogo{
-    position: absolute;  /* positionnée par rapport au parent */
-  top: 0;
-  left: 0;
-  width: 100%;        /* remplit la largeur */
-  height: 100%;       /* remplit la hauteur */
-  object-fit: cover;  /* image couvre tout le div sans déformation */
-  z-index: 1;  
-
-  }
-
-    h1, h2, h3 { margin-bottom: 10px; }
-    a { color: #3498db; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* --- Header --- */
-    header { 
-      background: linear-gradient(135deg, #2c3e50, #34495e); 
-      color: white; 
-      padding: 3% ; 
-      text-align: center; 
-      position: sticky; 
-      top: 0; 
-      z-index: 1000; 
-      height: 40px;
-    }
-
-    header h1 { font-size: 2.5em; margin: 0; }
-    header p { font-size: 1.2em; margin: 10px 0; }
-
-    nav { 
-
-      margin-top: 15px; 
-      right: 6%;
-      position: absolute;
-    }
-    nav a { 
-      color: white; 
-      
-      margin: 0 15px; 
-      font-weight: bold; 
-      transition: 0.3s; 
-    }
-    @media (max-width: 600px) {
-  nav a{
-    font-size: 5px;
-  }
-}
-
-@media (min-width: 1200px) {
-  nav a{
-    font-size: 16px;
-  }
-}
-
-    nav a:hover { color: #f39c12; }
-
-    /* --- Sections --- */
-
-
-    section h1 { 
-      color: #fcfdfe; 
-      text-align: center; 
-      margin-top: 0px; 
-      font-size: 100PX; 
-      
-      position: relative;
-    }
-    section h1::after {
-      content: "";
-      width: 60px; 
-      height: 4px; 
-      background: #3498db; 
-      display: block; 
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
-    #about{
-      margin:0px;
-      padding 0%;
-      height: 559px;
-      padding-bottom: 90px;
-    }
-   
-#photo{
-  position: absolute;
-  height: 599PX;
-  width: 100%;
-  max-width:1462PX ;
-  margin-right: 0px;
-  display: flex;
-  
-}
-
-
-    /* --- Compétences et projets en grille --- */
-    .skills, .projects { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-      gap: 25px; 
-    }
-
-    .card { 
-      background: white; 
-      padding: 20px; 
-      border-radius: 12px; 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
-      transition: transform 0.3s ease; 
-    }
-    .card:hover { 
-      transform: translateY(-8px); 
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12); 
-    }
-
-    .card h3 { margin-top: 0; color: #3498db; }
-
-    /* --- Contact --- */
-    #projects{
-      margin-top: 50px;
-      margin-bottom: 20px;
-      
-    }
-    #contact{
-      margin-top: 100px;
-    }
-    #contact p { 
-      background-color: #000000;
-      text-align: center; 
-      font-size: 1.1em; 
-      width: 350px;
-      margin: 20px;
-      padding: 10px;
-      border:  1px solid lightblue ;
-    }
-    #contactbox{
-      font-size: 10px;
-      background-color: #000000;
-      height: 690px;
-      width: 100%;
-      max-width: 100%;
-      margin: 0%;
-      padding: 0%;
-      box-sizing: border-box;
-      display: block;
-      position: relative ;
-    }
-    #phrase{
-      
-      font-size: 30px;
-      color: #f4f6f9;
-      text-align: center;
-      border: 0cm;
-    }
-    #miniphrase{
-      color: rgb(188, 189, 189);
-      text-align: center;
-      font-size: 20px;
-    }
-    #finalcontactbox{
-      position: absolute;
-      border: 1px white solid;
-      width: 27%;
-      height: 58%;
-      right: 2%;
-     top: 210px;
-     margin: 0%;
-     padding: 0%;
-     left: 34%;
-    }
-    #addresse{
-    position: absolute;
-    color: #3498db;
-    height: 90%;
-    width: 83%;
-    border:  1px solid lightblue ;
-    border-top-right-radius: 20% ;
-    right: 57%;
-    top: 19%;
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TOBA DEV - Portfolio" />
+    <meta property="og:description" content="Développeur passionné, je conçois des solutions web
+                        modernes et efficaces, alliant performance et
+                        simplicité.." />
     
-
-    }
-    #perso{
-      border: 1px white solid ;
-      margin: 30px;
-      padding: 10PX;
-      
-     
-    }
-    #perso p {
-      
-      color: #f4f6f9;
-      margin: 0%;
-      padding: 0%;
-      border: 0px;
-      width: 100%;
-      box-sizing: border-box;
-      
-    }
-    #message{
-     
-      display: flex;
-      flex-direction: column;
-      width: 83%;
-      height: 100%;
-      position: absolute;
-      padding-top: 0px;
-      margin: 0px;
-      border:  1px solid lightblue ;
-      left: 59%;
-      bottom: 13%;
-      background-color: rgb(13, 16, 46);
-      justify-content: center;
-      align-items: center;
-      border-top-left-radius: 20%;
-    }
-    #message input  {
-      font-family: revalia ;
-      color: #f4f6f9;
-      background-color: rgb(13, 16, 46);
-      height: 20px;
-      width: 78%;
-      top: 0px;
-      border-top: #fcfdfe;
-      border-left: #f4f6f9;
-      border-right: #fcfdfe;
-      padding: 10px;
-      margin-top: 30px;
-    }
-    #message textarea{
-      font-family: revalia ;
-      color: #f4f6f9;
-      background-color: rgb(13, 16, 46);
-      height: 70px;
-      width: 78%;
-      padding: 10px;
-      margin-top: 30px;
-      border-top: #fcfdfe;
-      border-left: #f4f6f9;
-      border-right: #fcfdfe;
-      
-    }
-    #envoie{
-      font-family: revalia ;
-      color: #f4f6f9;
-      text-align: center;
-      background-color: rgb(13, 16, 46);
-      height: 40px;
-      width: 75%;
-      border-color: #fcfdfe;
-      padding: 10px;
-      margin-top: 30px;
-    }
-    #envoie:hover{
-      background-color: #f4f6f9;
-      color:rgb(13, 16, 46);
-    }
-    /* --- Footer --- */
-    footer { 
-      background: #000000; 
-      color: white; 
-      border-top: 2px solid lightblue;
-      text-align: center; 
-      padding: 20px; 
-      margin-top: 0; 
-      font-size: 0.9em; 
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <div id="logo"><img src="images/Sans titre - 1 copie.svg" alt="" id=></div>
-
-  <nav>
-    <a href="#about">Présentation</a>
-    <a href="#skills">Compétences</a>
-    <a href="#projects">Projets</a>
-    <a href="#phrase">Contact</a>
-    <button type=""></button>
-  </nav>
-</header>
-<section id="about">
-  <img src="images/new.jpg"id="photo">
-  <h1>TOBA</h1>
-  <h3>DEV</h3>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    Je suis étudiant en BTS Développement d'Applications, passionné par la programmation et la cybersécurité. 
-    J’aime concevoir des projets concrets, que ce soit des applications web, logicielles ou de gestion. 
-    Mon objectif : évoluer en cybersécurité après mes études.
-  </p>
-</section>
-
-<section id="skills">
-  <h2>Compétences</h2>
-  <div class="skills">
-    <div class="card">HTML / CSS / JavaScript</div>
-    <div class="card">PHP / MySQL</div>
-    <div class="card">WinDev 25</div>
-    <div class="card">Git / GitHub</div>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Projets</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>Portfolio Web</h3>
-      <p>Ce site lui-même, créé pour présenter mon profil et mes compétences.</p>
-    </div>
-    <div class="card">
-      <h3></h3>
-      <p></p>
-    </div>
-    <div class="card">
-      <h3></h3>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div id="contactbox">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="TOBA DEV- Portfolio" />
+    <meta property="twitter:description" content="Développeur passionné, je conçois des solutions web
+                        modernes et efficaces, alliant performance et
+                        simplicité.." />
     
-    <h1 id="phrase">VENEZ ME PARLER</h1>
-    <h3 id="miniphrase">developpons ensemble une idée,Voici comment me joindre</h3>
-
-    <div id="finalcontactbox">
-     <div id="addresse">   
-      <div id="perso">
-        <p>EMAIL</p>
-          <p>emmanueltoba19@gmail.com</p>
-      </div>
-      <div id="perso">
-        <p>GITHUB</p>
-        <p>github.com/TPCEX</p>
-      </div>
-      <div id="perso">
-        <p>CEL / WHATSAPP / TELEGRAM</p>
-        <p>+225.05.95.87.21.90</p>
-      </div>
-     </div>
-  
-  <div id="message">
-    <input type="text" id="" placeholder="TON NOM COMPLET">
-    <input type="email" placeholder="TON EMAIL">
-    <textarea placeholder="TON MESSAGE"></textarea>
-    <button id="envoie" type="submit">Envoyer</button>
-  </div>
-  
-</div> 
-  
-</div>
-
-</section>
-
-<footer>
-  <p>© 2025... TOBA PAUL CHRIST-EMMANUEL</p>
-</footer>
-
-</body>
+    <title>portfolio - TOBA DEV</title>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <style>
+      /* Critical CSS for immediate rendering */
+      body {
+        margin: 0;
+        font-family: 'JetBrains Mono', monospace;
+        background: #ffffff;
+        color: #000000;
+        overflow-x: hidden;
+      }
+      
+      /* Loading animation */
+      .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+      
+      .loading-text {
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading">
+      <div class="loading-text">LOADING...</div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Remove loading screen when page is loaded
+      window.addEventListener('load', function() {
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.style.opacity = '0';
+          setTimeout(() => {
+            loading.style.display = 'none';
+          }, 500);
+        }
+      });
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
