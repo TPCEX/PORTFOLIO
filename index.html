@@ -20,12 +20,12 @@
     }
     /*positionnement du logo et son contenaire*/
     #logo img{
-      height: auto;
-      width: 140;
+      height: 100%;
       position: absolute;
       top: 0px;
-      right: 1300px;
-      padding-bottom: 1002PX;
+      left: 6%;
+      margin-top: 1%;
+      
       
     
     }
@@ -48,7 +48,7 @@
     header { 
       background: linear-gradient(135deg, #2c3e50, #34495e); 
       color: white; 
-      padding: 40px 20px; 
+      padding: 3% ; 
       text-align: center; 
       position: sticky; 
       top: 0; 
@@ -60,10 +60,14 @@
     header p { font-size: 1.2em; margin: 10px 0; }
 
     nav { 
-      padding-left: 700PX;
-      margin-top: 15px; }
+
+      margin-top: 15px; 
+      right: 6%;
+      position: absolute;
+    }
     nav a { 
       color: white; 
+      
       margin: 0 15px; 
       font-weight: bold; 
       transition: 0.3s; 
@@ -187,7 +191,6 @@
     color: #3498db;
     height: 90%;
     width: 83%;
-    position: absolute;
     border:  1px solid lightblue ;
     border-top-right-radius: 20% ;
     right: 57%;
@@ -195,18 +198,22 @@
     
 
     }
-    #addresse div {
+    #perso{
       border: 1px white solid ;
       margin: 30px;
       padding: 10PX;
+      
+     
     }
-    #addresse p {
+    #perso p {
       
       color: #f4f6f9;
       margin: 0%;
       padding: 0%;
       border: 0px;
-      width: 250Px;
+      width: 100%;
+      box-sizing: border-box;
+      
     }
     #message{
      
@@ -230,7 +237,7 @@
       color: #f4f6f9;
       background-color: rgb(13, 16, 46);
       height: 20px;
-      width: 250px;
+      width: 78%;
       top: 0px;
       border-top: #fcfdfe;
       border-left: #f4f6f9;
@@ -243,7 +250,7 @@
       color: #f4f6f9;
       background-color: rgb(13, 16, 46);
       height: 70px;
-      width: 250px;
+      width: 78%;
       padding: 10px;
       margin-top: 30px;
       border-top: #fcfdfe;
@@ -257,7 +264,7 @@
       text-align: center;
       background-color: rgb(13, 16, 46);
       height: 40px;
-      width: 250px;
+      width: 75%;
       border-color: #fcfdfe;
       padding: 10px;
       margin-top: 30px;
@@ -338,15 +345,15 @@
 
     <div id="finalcontactbox">
      <div id="addresse">   
-      <div>
+      <div id="perso">
         <p>EMAIL</p>
           <p>emmanueltoba19@gmail.com</p>
       </div>
-      <div>
+      <div id="perso">
         <p>GITHUB</p>
         <p>github.com/TPCEX</p>
       </div>
-      <div>
+      <div id="perso">
         <p>CEL / WHATSAPP / TELEGRAM</p>
         <p>+225.05.95.87.21.90</p>
       </div>
