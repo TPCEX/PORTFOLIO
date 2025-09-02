@@ -69,10 +69,21 @@
       color: white; 
       
       margin: 0 15px; 
-      font-size: clamp(14px, 1vw, 22px);
       font-weight: bold; 
       transition: 0.3s; 
     }
+    @media (max-width: 600px) {
+  nav a{
+    font-size: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav a{
+    font-size: 16px;
+  }
+}
+
     nav a:hover { color: #f39c12; }
 
     /* --- Sections --- */
